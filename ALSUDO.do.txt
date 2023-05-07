@@ -1,0 +1,7 @@
+vlib work
+vlog ALSU.v ALSU_TB.v
+vsim -voptargs=+acc work.alsu_tb
+add wave *
+add wave -position insertpoint  \
+sim:/alsu_tb/DUT/invalid
+run -all
